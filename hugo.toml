@@ -42,7 +42,3 @@ theme = 'terminal'
 		identifier = "whoami"
 		name = "whoami"
 		url = "/whoami"
-
-[module]
-[[module.imports]]
-  path = 'https://github.com/b4zh/hugo-theme-terminal/'
