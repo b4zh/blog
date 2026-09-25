@@ -1,4 +1,44 @@
-baseURL = 'https://b4zh.github.io'
+baseURL = 'https://b4zh.github.io/'
 locale = 'en-us'
 title = 'Blog'
 theme = 'terminal'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[markup.highlight]
+  noClasses = true
+
+[params]
+  centerTheme = true
+  showLastUpdated = true
+  updatedDatePrefix = "Actualizado"
+
+[languages]
+  [languages.es.params]
+    languageName = "Español"
+	title = "b4zh"
+	subtitle = "Sitio web de b4zh :)"
+	owner = "b4zh"
+	keywords = ""
+	copyright = ""
+	menuMore = "Mostrar más"
+	readMore = "Leer más"
+	readOtherPosts = "Otras publicaciones"
+	newerPosts = "Publicaciones más recientes"
+	olderPosts = "Publicaciones más antiguas"
+	missingContentMessage = "Página no encontrada :/"
+	missingBackButtonLabel = "Página de inicio"
+	minuteReadingTime = "min de lectura"
+	words = "palabras"
+
+    [languages.es.params.logo]
+	  logoText = "b4zh"
+	  logoHomeLink = "/"
+
+	[languages.es.menu]
+	  [[languages.es.menu.main]]
+		identifier = "whoami"
+		name = "whoami"
+		url = "/whoami"
