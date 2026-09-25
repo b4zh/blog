@@ -1,0 +1,7 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/b4zh/hugo-theme-terminal
+[submodule "public"]
+	path = public
+	url = https://github.com/b4zh/b4zh.github.io
+	branch = main
