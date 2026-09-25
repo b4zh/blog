@@ -8,7 +8,7 @@ theme = 'terminal'
     dir = ':cacheDir/images'
 
 [markup.highlight]
-  noClasses = true
+  noClasses = false
 
 [params]
   centerTheme = true
