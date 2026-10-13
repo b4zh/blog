@@ -3,7 +3,7 @@ date = '2026-10-05T11:47:50+02:00'
 draft = false
 title = '🐍 Bash Modo Vim'
 tags = ["linux", "bash", "vim"]
-summary = 'Bash con resaltado de sintaxis y modo de edición de vim'
+summary = 'Bash con resaltado de sintaxis y modo de edición de vim.'
 +++
 
 ## ¿Qué es ble.sh?
