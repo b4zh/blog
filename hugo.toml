@@ -1,0 +1,191 @@
+baseURL = 'https://b4zh.github.io/'
+locale = 'es-ES'
+title = 'b4zh'
+theme = 'vellum'
+
+defaultContentLanguage = "es"
+#defaultContentLanguageInSubdir = true
+
+enableRobotsTXT = true
+#capitalizeListTitles = false
+
+buildDrafts = true
+
+#[pagination]
+#  pagerSize = 3
+
+[taxonomies]
+  tag = "tags"
+
+#[outputFormats.ROOT404]
+#  mediaType = "text/html"
+#  baseName = "404"
+#  notAlternative = true
+#  root = true
+
+# --- languages -------------------------------------------------------------
+
+[languages]
+
+  [languages.es]
+    label = "Español"
+    contentDir = "content"
+    weight = 1
+    title = "B4ZH"
+
+    [languages.es.params]
+      description = "b4zh blog"
+      #DateFormat = ":date_long"
+
+      [languages.es.params.profile]
+        title = "b4zh"
+        subtitle = "I'm b4zh, not bash!"
+        image = "images/pepo.png"
+        imageAlt = "b4zh"
+        imageWidth = 120
+
+        #view = "terminal"
+        about = """
+Soy [b4zh](https://github.com/b4zh) , un *“aficionado”* de la **ciberseguridad**.
+
+Practico resolviendo **CTFs** de distintas plataformas, mis favoritas son [Vulnyx](https://vulnyx.com) y [HackMyVM](https://hackmyvm.eu).
+
+En este sitio publicaré cosas que considere interesantes y que tengan que ver con **GNU/Linux** y/o **ciberseguridad**.
+"""
+
+        [[languages.es.params.profile.fields]]
+          label = "BTW"
+          value = "🐧 I use Arch"
+
+        [[languages.es.params.profile.buttons]]
+          name = "Linux"
+          url = "linux/"
+
+        [[languages.es.params.profile.buttons]]
+          name = "CTF"
+          url = "ctf"
+
+        [[languages.es.params.profile.buttons]]
+          name = "LINKS"
+          url = "links"
+
+        [[languages.es.params.profile.projects]]
+          name        = "🐉 kali-suckless"
+          url         = "https://github.com/b4zh/kali-suckless"
+          description = "Kali Linux con un toque suckless"
+          tags        = ["Linux"]
+
+        [[languages.es.params.profile.contact]]
+          label = "Email"
+          value = "[b4zh@tuta.io](mailto:b4zh@tuta.io)"
+
+        [[languages.es.params.profile.contact]]
+          label = "Clave pública OpenPGP"
+          value = "[b4zh-public-key.asc](./b4zh-public-key.asc)"
+
+        [[languages.es.params.profile.contact]]
+          label = "Huella digital"
+          value = "4CA9 3560 CDB4 AE7F AB82 7228 5AE4 BDAC CF77 5EA3"
+
+      #[languages.es.params.editPost]
+      #  URL = "https://github.com/cebor/vellum/edit/main/exampleSite/content/en"
+      #  Text = "Suggest an edit"
+      #  appendFilePath = true
+
+    [languages.es.outputs]
+      home = ["HTML", "RSS", "JSON"]
+      #home = ["HTML", "RSS", "JSON", "ROOT404"]
+
+    [[languages.es.menus.main]]
+      name = "Linux"
+      pageRef = "/linux"
+      weight = 10
+
+    [[languages.es.menus.main]]
+      name = "CTF"
+      pageRef = "/ctf"
+      weight = 15
+
+    [[languages.es.menus.main]]
+      name = "Links"
+      pageRef = "/links"
+      weight = 20
+
+    [[languages.es.menus.main]]
+      name = "Tags"
+      pageRef = "/tags"
+      weight = 30
+
+    [[languages.es.menus.main]]
+      name = "Archive"
+      pageRef = "/archive"
+      weight = 35
+
+    [[languages.es.menus.main]]
+      name = "Buscar"
+      pageRef = "/search"
+      weight = 40
+
+      [languages.es.params.label]
+        text = "b4zh"
+        icon = "images/pepo.png"
+        iconHeight = 24
+
+      [languages.es.params.footer]
+        text = "b4zh - 2026"
+
+[params]
+  env = "production"
+  author = "b4zh"
+  defaultTheme = "dark"
+  latestPosts = 5
+  mainSections = ["archive", "ctf", "linux"]
+  keywords = ["linux"]
+
+#  ShowFullTextinRSS = true
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowShareButtons = true
+  ShowToc = true
+
+  TocOpen = false
+  ShareButtons = ["email"]
+
+#  # Real files in static/, so the icon rungs in head-assets.html are actually
+#  # rendered by the CI build instead of sitting behind an unset param. Both
+#  # optional attributes are deliberately left out: one 180x180 apple-touch-icon
+#  # needs no sizes, and the mask-icon colour is meant to fall through to
+#  # --accent, which is the path worth exercising because it reads 00-tokens.css.
+
+#  [params.assets]
+#    favicon = "/favicon.ico"
+#    favicon16x16 = "/favicon-16x16.png"
+#    favicon32x32 = "/favicon-32x32.png"
+#    favicon_svg = "/favicon.svg"
+#    apple_touch_icon = "/apple-touch-icon.png"
+#    safari_pinned_tab = "/safari-pinned-tab.svg"
+#    manifest = "/site.webmanifest"
+#
+  [params.cover]
+    linkFullImages = true
+
+  [params.schema]
+    publisherType = "Person"
+
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:b4zh@tuta.io"
+	title = "Email"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/b4zh"
+	title = "Github"
+
+  [params.fuseOpts]
+    threshold = 0.4
+    keys = ["title", "permalink", "summary", "content"]
