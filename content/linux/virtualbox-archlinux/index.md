@@ -1,6 +1,6 @@
 +++
 date = '2026-10-13T11:44:53Z'
-draft = true
+draft = false
 title = '📦 VirtualBox en Archlinux'
 tags = ["linux", "virtualbox", "archlinux"]
 summary = 'Instalar virtualbox en archlinux.'
@@ -62,6 +62,48 @@ Comprueba los cambios ejecutando:
 ```bash
 groups && grep vboxusers /etc/group
 ```
+
+## Extension Pack
+
+El paquete de extensiones es un conjunto de funcionalidades adicionales para Virtualbox, sin embargo no es necesario para el correcto funcionamiento del mismo.
+
+Aun así deberás instalarlo si vas a utilizar las siguientes funcionalidades que proporciona:
+
+- Integración con Oracle Cloud Infrastructure
+
+- Controlador de Host USB 2.0 y USB 3.0
+
+- Cámara Web del Host
+
+- VirtualBox RDP
+
+- ROM PXE
+
+- Cifrado de disco
+
+- NVMe
+
+Hay un paquete disponible en el AUR llamado `virtualbox-ext-oracle`, sin embargo yo suelo descargarlo directamente desde el sitio web de [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+
+Ya sea dándole en el **boton de descarga**, o usando **wget**:
+
+```bash
+wget [url/de/descarga/vbox-extpack]
+```
+
+### Instalar Extension Pack
+
+La instalación se puede hacer a través de la interfaz gráfica o usando `VBoxManage`.
+
+La instalación del paquete de extensiones requiere **acceso root**. En la [Arch Wiki](https://wiki.archlinux.org/title/VirtualBox_%28Espa%C3%B1ol%29#Paquete_de_extensiones) se menciona el uso de herramientas como [Polkit](https://wiki.archlinux.org/title/Polkit) para otorgar acceso privilegiado a VirtualBox.
+
+Yo instalaré el extensión pack usando `sudo`
+
+```bash
+sudo VBoxManage extpack install [/ruta/del/extension/pack.vbox-extpack]
+```
+
+Aceptas los términos y condiciones y listo.
 
 ## Fin
 
