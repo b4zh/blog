@@ -6,5 +6,10 @@ description = "Enlaces a sitios web interesantes que me voy encontrando mientras
 
 ![./pinguino-pc](./penguin-pc.png "Pingüino usando la computadora")
 
+## Textos
 
+[Diálogo entre un desarrollador y un niño](https://riggraz.dev/dialogue-developer.html)
 
+## Juegos
+
+[Slow Roads](https://slowroads.io/)
